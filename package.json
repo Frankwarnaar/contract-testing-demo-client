@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "serve src",
-    "watch": "tsc --project tsconfig.json --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "tsc-bundle tsconfig.json --watch",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,12 @@
   },
   "homepage": "https://github.com/Frankwarnaar/contract-testing-demo#readme",
   "devDependencies": {
-    "serve": "11.3.0",
-    "typescript": "3.7.5"
+    "@babel/polyfill": "7.8.3",
+    "@pact-foundation/pact": "9.6.0",
+    "babel-jest": "24.9.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-preset-env": "1.7.0",
+    "jest": "24.9.0",
+    "serve": "11.3.0"
   }
 }

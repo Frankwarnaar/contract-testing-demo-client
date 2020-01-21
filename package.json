@@ -1,9 +1,11 @@
 {
-  "name": "contract-testing-demo",
+  "name": "contract-testing-demo-client",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "serve src",
+    "watch": "tsc --project tsconfig.json --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Frankwarnaar/contract-testing-demo/issues"
   },
-  "homepage": "https://github.com/Frankwarnaar/contract-testing-demo#readme"
+  "homepage": "https://github.com/Frankwarnaar/contract-testing-demo#readme",
+  "devDependencies": {
+    "serve": "11.3.0",
+    "typescript": "3.7.5"
+  }
 }

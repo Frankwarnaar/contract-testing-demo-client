@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "serve src",
-    "watch": "tsc-bundle tsconfig.json --watch",
+    "watch": "rollup --config rollup.config.js --watch",
+    "build": "rollup --config rollup.config.js",
     "test": "jest"
   },
   "repository": {
@@ -21,10 +22,18 @@
   "devDependencies": {
     "@babel/polyfill": "7.8.3",
     "@pact-foundation/pact": "9.6.0",
+    "@rollup/plugin-commonjs": "11.0.1",
+    "@rollup/plugin-json": "4.0.1",
+    "@rollup/plugin-node-resolve": "7.0.0",
     "babel-jest": "24.9.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
     "babel-preset-env": "1.7.0",
     "jest": "24.9.0",
+    "jest-fetch-mock": "3.0.1",
+    "rollup": "1.29.1",
     "serve": "11.3.0"
+  },
+  "dependencies": {
+    "axios": "0.19.2"
   }
 }

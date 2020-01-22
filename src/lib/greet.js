@@ -1,6 +1,8 @@
+import axios from 'axios'
+
 export default function () {
-  return getName()
-    .then(greet)
+  return getPerson()
+    .then(person => greet(person.name))
     .catch(error => {
       console.error('error', error)
       
@@ -8,10 +10,9 @@ export default function () {
     })
 }
 
-export function getName() {
-  return fetch('http://localhost:8888/.netlify/functions/get-name')
-    .then(res => res.json())
-    .then(person => person.name)
+export function getPerson() {
+  return axios.get('http://localhost:8888/.netlify/functions/get-name')
+    .then(res => res.data)
 }
   
 function greet(name) {

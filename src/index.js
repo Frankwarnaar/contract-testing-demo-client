@@ -1,5 +1,5 @@
-import greet from './lib/greet.js'
+import greet from './lib/greet'
 
 (function () {
-  greet()
-})()
+  greet();
+})();
